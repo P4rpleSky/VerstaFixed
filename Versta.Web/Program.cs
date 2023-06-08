@@ -1,7 +1,16 @@
+using Versta.Web.Services.Interfaces;
+using Versta.Web.Services;
+using Versta.Web;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+SD.BaseUrl = builder.Configuration["BaseUrl"];
+
+builder.Services.AddHttpClient<IOrderService, OrderService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
 
 var app = builder.Build();
 
@@ -22,6 +31,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Order}/{action=OrdersListIndex}");
 
 app.Run();

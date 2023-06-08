@@ -1,0 +1,167 @@
+﻿@using Versta.Web.Models
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model OrderRazorModel
+
+@{
+	var formAspAction = "";
+	var formName = "Информация о заказе";
+	string? disabledAttribure = null;
+	string? hiddenAttribure = null;
+	var formActionName = "";
+
+	switch (Model.ViewType)
+	{
+		case SD.ViewType.Create:
+			formAspAction = "OrderCreate";
+			formName = "Создать заказ";
+			formActionName = "Создать";
+            break;
+		default:
+			disabledAttribure = "disabled";
+			hiddenAttribure = "hidden";
+			break;
+	}
+}
+
+<form asp-action="@formAspAction">
+    <br />
+    <div class="container border p-3">
+        <h1 class="text-primary">@formName</h1>
+
+        <hr />
+        <div class="row">
+            <br />
+            <h3 class="text-primary">Отправитель</h3>
+            <div class="col-2">
+                <label asp-for="Order.SenderAddress.City" class="control-label pt-2" style="font-size:20px;">Город</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input disabled="@disabledAttribure" asp-for="Order.SenderAddress.City" class="form-control" />
+                <span hidden="@hiddenAttribure" asp-validation-for="Order.SenderAddress.City" class="text-danger"></span>
+            </div>
+
+            <div class="col-2">
+                <label asp-for="Order.SenderAddress.StreetName" class="control-label pt-2" style="font-size:20px;">Улица</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input disabled="@disabledAttribure" asp-for="Order.SenderAddress.StreetName" class="form-control" />
+                <span hidden="@hiddenAttribure" asp-validation-for="Order.SenderAddress.StreetName" class="text-danger"></span>
+            </div>
+
+            <div class="col-2">
+                <label asp-for="Order.SenderAddress.HouseNumber" class="control-label pt-2" style="font-size:20px;">Номер дома</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input disabled="@disabledAttribure" asp-for="Order.SenderAddress.HouseNumber" class="form-control" />
+                <span hidden="@hiddenAttribure" asp-validation-for="Order.SenderAddress.HouseNumber" class="text-danger"></span>
+            </div>
+            
+            <div class="col-2">
+	            <label asp-for="Order.SenderAddress.Block" class="control-label pt-2" style="font-size:20px;">Корпус</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input disabled="@disabledAttribure" asp-for="Order.SenderAddress.Block" class="form-control" />
+                <span hidden="@hiddenAttribure" asp-validation-for="Order.SenderAddress.Block" class="text-danger"></span>
+            </div>
+
+            <div class="col-2">
+                <label asp-for="Order.SenderAddress.BuildingNumber" class="control-label pt-2" style="font-size:20px;">Строение</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input disabled="@disabledAttribure" asp-for="Order.SenderAddress.BuildingNumber" class="form-control" />
+                <span hidden="@hiddenAttribure" asp-validation-for="Order.SenderAddress.BuildingNumber" class="text-danger"></span>
+            </div>
+
+            <div class="col-2">
+                <label asp-for="Order.SenderAddress.FlatNumber" class="control-label pt-2" style="font-size:20px;">Квартира</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input disabled="@disabledAttribure" asp-for="Order.SenderAddress.FlatNumber" class="form-control" />
+                <span hidden="@hiddenAttribure" asp-validation-for="Order.SenderAddress.FlatNumber" class="text-danger"></span>
+            </div>
+            
+            
+
+            <br />
+            <h3 class="text-primary">Получатель</h3>
+            <div class="col-2">
+                <label asp-for="Order.RecipientAddress.City" class="control-label pt-2" style="font-size:20px;">Город</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input disabled="@disabledAttribure" asp-for="Order.RecipientAddress.City" class="form-control" />
+                <span hidden="@hiddenAttribure" asp-validation-for="Order.RecipientAddress.City" class="text-danger"></span>
+            </div>
+
+            <div class="col-2">
+                <label asp-for="Order.RecipientAddress.StreetName" class="control-label pt-2" style="font-size:20px;">Улица</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input disabled="@disabledAttribure" asp-for="Order.RecipientAddress.StreetName" class="form-control" />
+                <span hidden="@hiddenAttribure" asp-validation-for="Order.RecipientAddress.StreetName" class="text-danger"></span>
+            </div>
+
+            <div class="col-2">
+                <label asp-for="Order.RecipientAddress.HouseNumber" class="control-label pt-2" style="font-size:20px;">Номер дома</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input disabled="@disabledAttribure" asp-for="Order.RecipientAddress.HouseNumber" class="form-control" />
+                <span hidden="@hiddenAttribure" asp-validation-for="Order.RecipientAddress.HouseNumber" class="text-danger"></span>
+            </div>
+
+            <div class="col-2">
+                <label asp-for="Order.RecipientAddress.Block" class="control-label pt-2" style="font-size:20px;">Корпус</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input disabled="@disabledAttribure" asp-for="Order.RecipientAddress.Block" class="form-control" />
+                <span hidden="@hiddenAttribure" asp-validation-for="Order.RecipientAddress.Block" class="text-danger"></span>
+            </div>
+
+            <div class="col-2">
+                <label asp-for="Order.RecipientAddress.BuildingNumber" class="control-label pt-2" style="font-size:20px;">Строение</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input disabled="@disabledAttribure" asp-for="Order.RecipientAddress.BuildingNumber" class="form-control" />
+                <span hidden="@hiddenAttribure" asp-validation-for="Order.RecipientAddress.BuildingNumber" class="text-danger"></span>
+            </div>
+
+            <div class="col-2">
+                <label asp-for="Order.RecipientAddress.FlatNumber" class="control-label pt-2" style="font-size:20px;">Квартира</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input disabled="@disabledAttribure" asp-for="Order.RecipientAddress.FlatNumber" class="form-control" />
+                <span hidden="@hiddenAttribure" asp-validation-for="Order.RecipientAddress.FlatNumber" class="text-danger"></span>
+            </div>
+
+            <br />
+            <h3 class="text-primary">Данные о грузе</h3>
+            <div class="col-2">
+                <label asp-for="Order.CargoWeightStr" class="control-label pt-2" style="font-size:20px;">Вес, кг</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input disabled="@disabledAttribure" asp-for="Order.CargoWeightStr" class="form-control" />
+                <span hidden="@hiddenAttribure" asp-validation-for="Order.CargoWeightStr" class="text-danger"></span>
+            </div>
+
+            <div class="col-2">
+                <label asp-for="Order.PickupDate" class="control-label pt-2" style="font-size:20px;">Дата забора груза</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input disabled="@disabledAttribure" asp-for="Order.PickupDate" class="form-control" />
+                <span hidden="@hiddenAttribure" asp-validation-for="Order.PickupDate" class="text-danger"></span>
+            </div>
+
+            <div class="col-5 offset-2">
+	            <a asp-action="OrdersListIndex" class="btn-primary btn form-control ">Назад к списку</a>
+            </div>
+            
+            <div disabled="@disabledAttribure" class="col-5">
+                <input disabled="@disabledAttribure"  type="submit" value="@formActionName" class="btn btn-success form-control" />
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
