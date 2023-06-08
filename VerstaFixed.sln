@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Versta.OrderApi", "Versta.OrderApi\Versta.OrderApi.csproj", "{92B18D54-131D-49BC-92C4-5BF85F785872}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Versta.Web", "Versta.Web\Versta.Web.csproj", "{895E8048-FCF7-40F2-8F91-902E678143C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92B18D54-131D-49BC-92C4-5BF85F785872}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92B18D54-131D-49BC-92C4-5BF85F785872}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92B18D54-131D-49BC-92C4-5BF85F785872}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92B18D54-131D-49BC-92C4-5BF85F785872}.Release|Any CPU.Build.0 = Release|Any CPU
+		{895E8048-FCF7-40F2-8F91-902E678143C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{895E8048-FCF7-40F2-8F91-902E678143C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{895E8048-FCF7-40F2-8F91-902E678143C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{895E8048-FCF7-40F2-8F91-902E678143C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A703A3A-64AE-4037-8AB4-1466A10C7D1B}
+	EndGlobalSection
+EndGlobal
