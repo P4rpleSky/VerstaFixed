@@ -6,7 +6,6 @@ namespace Versta.OrderApi.Models.Dtos;
 
 public partial class AddressDto
 {
-    public int Id { get; set; }
     
     public string City { get; set; } = null!;
 
